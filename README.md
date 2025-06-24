@@ -61,6 +61,11 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
+7. **Create a Superuser**
+```
+$ python manage.py createsuperuser
+```
+
 5. **Run server**
 ```
 $ python manage.py runserver
