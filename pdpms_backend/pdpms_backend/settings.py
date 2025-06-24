@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
+# Optional: enable if using AWS Cognito for JWT-based authentication
+  # 'django_cognito_jwt' 
 ]
 
 MIDDLEWARE = [
@@ -47,7 +51,20 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION-CLASSES': (
+        'rest_framework.permission.AllowAny'
+    ),
+# Optional: enable this when integrating with AWS Cognito authentication
+  # "DEFAULT_AUTHENTICATION_CLASSES": (
+  #      "django_cognito_jwt.JSONWebTokenAuthentication",
+  # ),
+}
 
 ROOT_URLCONF = 'pdpms_backend.urls'
 
