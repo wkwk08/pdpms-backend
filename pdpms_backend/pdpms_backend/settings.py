@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'pdpms_backend.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'pdpms_db',
+       'NAME': 'pdpms-DB',
        'USER': 'postgres',
        'PASSWORD': 'zxcxcz.',
        'HOST': 'localhost',
