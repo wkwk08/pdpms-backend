@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'activity_logs',
     'documents',
     'employees',
+    'properties',
     'rest_framework',
     'corsheaders',
 # Optional: enable if using AWS Cognito for JWT-based authentication
