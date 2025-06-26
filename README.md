@@ -25,18 +25,8 @@ $ venv\Scripts\activate
 ```
 $ pip install -r requirements.txt
 ```
-<!--
-4. **Set Up the Database on Windows (PostgreSQL)** 
-First, download the .sql file, which can be found in our repository. Then, open a Command Prompt (cmd) and run the following commands:
-```
-cd C:\Users\DELL\Downloads  REM This will locate where your .sql file is stored
-set PATH=%PATH%;C:\Program Files\PostgreSQL\17\bin
-set PGPASSWORD=your_database_password
-psql -U postgres -c "CREATE DATABASE accounting_db;"
-psql -U postgres -d accounting_db -f accounting_db_dump.sql
-```
-!-->
-5. **Configure Database Settings (settings.py)**
+
+4. **Configure Database Settings (settings.py)**
 ```
 DATABASES = {
     'default': {
@@ -53,18 +43,18 @@ DATABASES = {
 }
 ```
 
-4. **Apply Migrations**
+5. **Apply Migrations**
 ```
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-7. **Create a Superuser**
+6. **Create a Superuser**
 ```
 $ python manage.py createsuperuser
 ```
 
-5. **Run server**
+7. **Run server**
 ```
 $ python manage.py runserver
 ```
