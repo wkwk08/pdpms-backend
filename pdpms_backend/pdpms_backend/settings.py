@@ -92,10 +92,17 @@ WSGI_APPLICATION = 'pdpms_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'pdpms_db',
+       'USER': 'postgres',
+       'PASSWORD': 'zxcxcz.',
+       'HOST': 'localhost',
+       'PORT': '5432',
+       'OPTIONS': {
+           'options': '-c search_path=pdpms'
+       }
+   }
 }
 
 
