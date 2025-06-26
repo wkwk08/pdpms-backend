@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'activity_logs',
     'rest_framework',
     'corsheaders',
 # Optional: enable if using AWS Cognito for JWT-based authentication
