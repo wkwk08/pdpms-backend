@@ -35,25 +35,23 @@ set PGPASSWORD=your_database_password
 psql -U postgres -c "CREATE DATABASE accounting_db;"
 psql -U postgres -d accounting_db -f accounting_db_dump.sql
 ```
-
+!-->
 5. **Configure Database Settings (settings.py)**
 ```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'accounting_db',
+        'NAME': 'pdpms-DB',
         'USER': 'postgres',
         'PASSWORD': 'your_database_password',
         'HOST': 'localhost',
         'PORT': '5432',
         'OPTIONS': {
-            'options': '-c search_path=accounting'
+            'options': '-c search_path=pdpms'
         }
     }
 }
-# Found in accounting_backend
 ```
-!-->
 
 4. **Apply Migrations**
 ```
