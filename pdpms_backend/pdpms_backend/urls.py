@@ -21,11 +21,13 @@ from rest_framework.routers import DefaultRouter
 from activity_logs.views import ActivityLogViewSet
 from documents.views import DocumentViewSet
 from employees.views import EmployeeViewSet
+from properties.views import PropertyViewSet
 
 router = DefaultRouter()
 router.register(r'activity-logs', ActivityLogViewSet)
 router.register(r'documents', DocumentViewSet)
 router.register(r'employees', EmployeeViewSet)
+router.register(r'properties', PropertyViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
