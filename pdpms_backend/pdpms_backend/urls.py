@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from activity_logs.views import ActivityLogViewSet
+from documents.views import DocumentViewSet
+
+router = DefaultRouter()
+router.register(r'activity-logs', ActivityLogViewSet)
+router.register(r'documents', DocumentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('activity_logs.urls')),
-    path('api/', include('documents.urls')),
+    path('pdpms/manila-city-hall/', include(router.urls)),
 ]
