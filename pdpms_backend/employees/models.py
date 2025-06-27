@@ -1,3 +1,14 @@
 from django.db import models
 
-# Create your models here.
+class Employee(models.Model):
+    employee_id = models.CharField(max_length=255, primary_key=True)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    job_position = models.CharField(max_length=255)
+
+    class Meta:
+        db_table = 'employees'
+        managed = False
+
+    def __str__(self):
+        return f"{self.employee_id} - {self.first_name} {self.last_name}"
