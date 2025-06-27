@@ -14,7 +14,7 @@ class Property(models.Model):
     remarks = models.TextField()
 
     class Meta:
-        db_table = 'property'
+        db_table = 'properties'
         managed = False
 
     def __str__(self):
