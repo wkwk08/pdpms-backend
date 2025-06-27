@@ -6,5 +6,9 @@ class ActivityLog(models.Model):
     action_log = models.TextField()
     timestamp = models.DateTimeField()
 
+    class Meta:
+        db_table = 'activity_logs'
+        managed = False
+
     def __str__(self):
         return f"{self.log_id} - {self.username}"
