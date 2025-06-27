@@ -1,3 +1,19 @@
 from django.db import models
 
-# Create your models here.
+class Document(models.Model):
+    document_id = models.CharField(max_length=255, primary_key=True)
+    reference_code = models.CharField(max_length=255)
+    subject = models.TextField()
+    document_type = models.CharField(max_length=255)
+    document_date = models.DateField()
+    date_received = models.DateField()
+    assigned_to = models.CharField(max_length=255)
+    status = models.CharField(max_length=255)
+    remarks = models.TextField()
+
+    class Meta:
+        db_table = 'documents'
+        managed = False
+
+    def __str__(self):
+        return f"{self.document_id} - {self.subject}"
