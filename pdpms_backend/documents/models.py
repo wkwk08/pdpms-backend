@@ -7,7 +7,7 @@ class Document(models.Model):
     document_type = models.CharField(max_length=255)
     document_date = models.DateField()
     date_received = models.DateField()
-    assigned_to = models.CharField(max_length=255)
+    received_by = models.CharField(max_length=255)
     status = models.CharField(max_length=255)
     remarks = models.TextField()
 
