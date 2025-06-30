@@ -3,6 +3,7 @@ from .models import Property
 from .models import ServiceableProperty
 from .models import UnserviceableProperty
 from .models import ForRepairProperty
+from .models import CondemnedProperty
 
 class PropertySerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,4 +23,9 @@ class UnserviceablePropertySerializer(serializers.ModelSerializer):
 class ForRepairPropertySerializer(serializers.ModelSerializer):
     class Meta:
         model = ForRepairProperty
+        fields = '__all__'
+
+class CondemnedPropertySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CondemnedProperty
         fields = '__all__'
