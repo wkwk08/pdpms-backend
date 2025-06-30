@@ -26,6 +26,7 @@ from documents.views import ArchivedDocumentViewSet
 from employees.views import EmployeeViewSet
 from properties.views import PropertyViewSet
 from properties.views import ServiceablePropertyViewSet
+from properties.views import UnserviceablePropertyViewSet
 from users.views import UserViewSet
 
 router = DefaultRouter()
@@ -37,6 +38,7 @@ router.register(r'archived-documents', ArchivedDocumentViewSet)
 router.register(r'employees', EmployeeViewSet)
 router.register(r'properties', PropertyViewSet)
 router.register(r'serviceable-properties', ServiceablePropertyViewSet)
+router.register(r'unserviceable-properties', UnserviceablePropertyViewSet)
 router.register(r'users', UserViewSet)
 
 urlpatterns = [
