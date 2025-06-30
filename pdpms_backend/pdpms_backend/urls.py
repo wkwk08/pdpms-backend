@@ -20,6 +20,7 @@ from rest_framework.routers import DefaultRouter
 
 from activity_logs.views import ActivityLogViewSet
 from documents.views import DocumentViewSet
+from documents.views import OnGoingDocumentViewSet
 from documents.views import CompletedDocumentViewSet
 from employees.views import EmployeeViewSet
 from properties.views import PropertyViewSet
@@ -28,6 +29,7 @@ from users.views import UserViewSet
 router = DefaultRouter()
 router.register(r'activity-logs', ActivityLogViewSet)
 router.register(r'documents', DocumentViewSet)
+router.register(r'ongoing-documents', OnGoingDocumentViewSet)
 router.register(r'completed-documents', CompletedDocumentViewSet)
 router.register(r'employees', EmployeeViewSet)
 router.register(r'properties', PropertyViewSet)
