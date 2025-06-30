@@ -4,6 +4,8 @@ from .models import Document
 from .serializers import DocumentSerializer
 from .models import CompletedDocument
 from .serializers import CompletedDocumentSerializer
+from .models import OnGoingDocument
+from .serializers import OnGoingDocumentSerializer
 
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
@@ -12,3 +14,7 @@ class DocumentViewSet(viewsets.ModelViewSet):
 class CompletedDocumentViewSet(viewsets.ModelViewSet):
     queryset = CompletedDocument.objects.all()
     serializer_class = CompletedDocumentSerializer
+
+class OnGoingDocumentViewSet(viewsets.ModelViewSet):
+    queryset = OnGoingDocument.objects.all()
+    serializer_class = OnGoingDocumentSerializer
