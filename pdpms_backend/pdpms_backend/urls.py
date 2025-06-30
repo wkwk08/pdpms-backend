@@ -22,6 +22,7 @@ from activity_logs.views import ActivityLogViewSet
 from documents.views import DocumentViewSet
 from documents.views import OnGoingDocumentViewSet
 from documents.views import CompletedDocumentViewSet
+from documents.views import ArchivedDocumentViewSet
 from employees.views import EmployeeViewSet
 from properties.views import PropertyViewSet
 from users.views import UserViewSet
@@ -31,6 +32,7 @@ router.register(r'activity-logs', ActivityLogViewSet)
 router.register(r'documents', DocumentViewSet)
 router.register(r'ongoing-documents', OnGoingDocumentViewSet)
 router.register(r'completed-documents', CompletedDocumentViewSet)
+router.register(r'archived-documents', ArchivedDocumentViewSet)
 router.register(r'employees', EmployeeViewSet)
 router.register(r'properties', PropertyViewSet)
 router.register(r'users', UserViewSet)
