@@ -28,6 +28,7 @@ from properties.views import PropertyViewSet
 from properties.views import ServiceablePropertyViewSet
 from properties.views import UnserviceablePropertyViewSet
 from properties.views import ForRepairPropertyViewSet
+from properties.views import CondemnedPropertyViewSet
 from users.views import UserViewSet
 
 router = DefaultRouter()
@@ -41,6 +42,7 @@ router.register(r'properties', PropertyViewSet)
 router.register(r'serviceable-properties', ServiceablePropertyViewSet)
 router.register(r'unserviceable-properties', UnserviceablePropertyViewSet)
 router.register(r'for-repair-properties', ForRepairPropertyViewSet)
+router.register(r'condemned-properties', CondemnedPropertyViewSet)
 router.register(r'users', UserViewSet)
 
 urlpatterns = [
