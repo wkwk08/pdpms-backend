@@ -6,6 +6,8 @@ from .models import ServiceableProperty
 from .serializers import ServiceablePropertySerializer
 from .models import UnserviceableProperty
 from .serializers import UnserviceablePropertySerializer
+from .models import ForRepairProperty
+from .serializers import ForRepairPropertySerializer
 
 class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
@@ -18,3 +20,7 @@ class ServiceablePropertyViewSet(viewsets.ModelViewSet):
 class UnserviceablePropertyViewSet(viewsets.ModelViewSet):
     queryset = UnserviceableProperty.objects.all()
     serializer_class = UnserviceablePropertySerializer
+
+class ForRepairPropertyViewSet(viewsets.ModelViewSet):
+    queryset = ForRepairProperty.objects.all()
+    serializer_class = ForRepairPropertySerializer
