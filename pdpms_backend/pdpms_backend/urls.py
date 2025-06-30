@@ -18,32 +18,32 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from activity_logs.views import ActivityLogViewSet
 from documents.views import DocumentViewSet
 from documents.views import OnGoingDocumentViewSet
 from documents.views import CompletedDocumentViewSet
 from documents.views import ArchivedDocumentViewSet
-from employees.views import EmployeeViewSet
 from properties.views import PropertyViewSet
 from properties.views import ServiceablePropertyViewSet
 from properties.views import UnserviceablePropertyViewSet
 from properties.views import ForRepairPropertyViewSet
 from properties.views import CondemnedPropertyViewSet
+from activity_logs.views import ActivityLogViewSet
 from users.views import UserViewSet
+from employees.views import EmployeeViewSet
 
 router = DefaultRouter()
-router.register(r'activity-logs', ActivityLogViewSet)
 router.register(r'documents', DocumentViewSet)
 router.register(r'ongoing-documents', OnGoingDocumentViewSet)
 router.register(r'completed-documents', CompletedDocumentViewSet)
 router.register(r'archived-documents', ArchivedDocumentViewSet)
-router.register(r'employees', EmployeeViewSet)
 router.register(r'properties', PropertyViewSet)
 router.register(r'serviceable-properties', ServiceablePropertyViewSet)
 router.register(r'unserviceable-properties', UnserviceablePropertyViewSet)
 router.register(r'for-repair-properties', ForRepairPropertyViewSet)
 router.register(r'condemned-properties', CondemnedPropertyViewSet)
+router.register(r'activity-logs', ActivityLogViewSet)
 router.register(r'users', UserViewSet)
+router.register(r'employees', EmployeeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
