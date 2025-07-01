@@ -44,7 +44,7 @@ class OnGoingDocument(models.Model):
     document_date = models.DateField()
     date_received = models.DateField()
     received_by = models.CharField(max_length=255)
-    status = models.CharField(max_length=255)
+    document_status = models.CharField(max_length=255)
     remarks = models.TextField()
 
     class Meta:
