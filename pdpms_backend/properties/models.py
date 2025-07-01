@@ -50,7 +50,7 @@ class UnserviceableProperty(models.Model):
     unit_cost = models.DecimalField(max_digits=10, decimal_places=2)
     end_user = models.CharField(max_length=255)
     estimated_life_use = models.IntegerField()
-    status = models.CharField(max_length=255)
+    property_status = models.CharField(max_length=255)
     remarks = models.TextField()
 
     class Meta:
