@@ -10,6 +10,7 @@ class Document(models.Model):
     received_by = models.CharField(max_length=255)
     document_status = models.CharField(max_length=255)
     remarks = models.TextField()
+    pdf_file = models.FileField(upload_to='documents/pdfs/', null=True, blank=True)
 
     class Meta:
         db_table = 'documents'
