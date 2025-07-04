@@ -9,6 +9,13 @@ class DocumentSerializer(serializers.ModelSerializer):
         model = Document
         fields = '__all__'
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        if instance.pdf_file:
+            request = self.context.get('request')
+            representation['pdf_file'] = request.build_absolute_uri(instance.pdf_file.url)
+        return representation
+
 class CompletedDocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = CompletedDocument
