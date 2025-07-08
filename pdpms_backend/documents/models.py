@@ -10,6 +10,8 @@ class Document(models.Model):
     received_by = models.CharField(max_length=255)
     document_status = models.CharField(max_length=255)
     remarks = models.TextField()
+    pdf_file = models.FileField(upload_to='documents/pdfs/', null=True, blank=True)
+    base_document_id = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
         db_table = 'documents'
@@ -28,6 +30,7 @@ class CompletedDocument(models.Model):
     received_by = models.CharField(max_length=255)
     document_status = models.CharField(max_length=255)
     remarks = models.TextField()
+    pdf_file = models.FileField(null=True, blank=True)
 
     class Meta:
         db_table = 'completed_documents'
@@ -46,6 +49,7 @@ class OnGoingDocument(models.Model):
     received_by = models.CharField(max_length=255)
     document_status = models.CharField(max_length=255)
     remarks = models.TextField()
+    pdf_file = models.FileField(null=True, blank=True)
 
     class Meta:
         db_table = 'ongoing_documents'
@@ -64,6 +68,7 @@ class ArchivedDocument(models.Model):
     received_by = models.CharField(max_length=255)
     document_status = models.CharField(max_length=255)
     remarks = models.TextField()
+    pdf_file = models.FileField(null=True, blank=True) 
 
     class Meta:
         db_table = 'archived_documents'

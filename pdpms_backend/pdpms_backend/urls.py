@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from django.conf import settings
+from django.conf.urls.static import static
 
 from documents.views import DocumentViewSet
 from documents.views import OnGoingDocumentViewSet
@@ -48,5 +50,9 @@ router.register(r'employees', EmployeeViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pdpms/manila-city-hall/', include(router.urls)),
+<<<<<<< HEAD
     path('pdpms/dashboard/', include('dashboard.urls')),
 ]
+=======
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 9d3d5a2d7d109a204b4b43d934fe3917965c36c9
