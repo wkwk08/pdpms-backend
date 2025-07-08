@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users',
     'rest_framework',
     'corsheaders',
+    'dashboard',
 # Optional: enable if using AWS Cognito for JWT-based authentication
   # 'django_cognito_jwt' 
 ]
@@ -100,7 +101,7 @@ DATABASES = {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'pdpms-DB',
        'USER': 'postgres',
-       'PASSWORD': 'zxcxcz.',
+       'PASSWORD': 'herson52104',
        'HOST': 'localhost',
        'PORT': '5432',
        'OPTIONS': {

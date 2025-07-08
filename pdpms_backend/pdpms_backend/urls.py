@@ -48,4 +48,5 @@ router.register(r'employees', EmployeeViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pdpms/manila-city-hall/', include(router.urls)),
+    path('pdpms/dashboard/', include('dashboard.urls')),
 ]
