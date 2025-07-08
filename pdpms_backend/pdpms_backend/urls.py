@@ -1,4 +1,4 @@
-"""
+""""
 URL configuration for pdpms_backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -50,9 +50,5 @@ router.register(r'employees', EmployeeViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pdpms/manila-city-hall/', include(router.urls)),
-<<<<<<< HEAD
     path('pdpms/dashboard/', include('dashboard.urls')),
-]
-=======
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> 9d3d5a2d7d109a204b4b43d934fe3917965c36c9
