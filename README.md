@@ -26,7 +26,12 @@ $ venv\Scripts\activate
 $ pip install -r requirements.txt
 ```
 
-4. **Configure Database Settings (settings.py)**
+4. **Switch to pdpms/main branch**
+```
+$ git checkout pdpms/main
+```
+
+5. **Configure Database Settings (settings.py)**
 ```
 DATABASES = {
     'default': {
@@ -43,18 +48,18 @@ DATABASES = {
 }
 ```
 
-5. **Apply Migrations**
+6. **Apply Migrations**
 ```
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-6. **Create a Superuser**
+7. **Create a Superuser**
 ```
 $ python manage.py createsuperuser
 ```
 
-7. **Run server**
+8. **Run server**
 ```
 $ python manage.py runserver
 ```
