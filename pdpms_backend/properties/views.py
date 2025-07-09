@@ -14,6 +14,7 @@ from .serializers import CondemnedPropertySerializer
 class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
     serializer_class = PropertySerializer
+    lookup_field = 'property_no' # Use property_no as the lookup field
 
 class ServiceablePropertyViewSet(viewsets.ModelViewSet):
     queryset = ServiceableProperty.objects.all()
