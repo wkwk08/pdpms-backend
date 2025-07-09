@@ -26,7 +26,7 @@ $ venv\Scripts\activate
 $ pip install -r requirements.txt
 ```
 
-4. *Switch to pdpms/main branch**
+4. **Switch to pdpms/main branch**
 ```
 $ git checkout pdpms/main
 ```
