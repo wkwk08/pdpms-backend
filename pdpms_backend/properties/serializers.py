@@ -9,6 +9,12 @@ class PropertySerializer(serializers.ModelSerializer):
     class Meta:
         model = Property
         fields = '__all__'
+        extra_kwargs = {
+            'property_no': {'required': False},  # Not required in POST since trigger sets it
+            'serial_no': {'required': False, 'allow_blank': True, 'allow_null': True},
+            'unit_cost': {'required': False, 'allow_null': True},
+            'estimated_life_use': {'required': False, 'allow_null': True},
+        }
 
 class ServiceablePropertySerializer(serializers.ModelSerializer):
     class Meta:
